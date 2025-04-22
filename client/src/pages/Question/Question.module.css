@@ -82,7 +82,7 @@
     padding: 2em;
     width: 100%;
     /* width: auto; */
-    background-color: hsl(0, 83%, 41%);
+    background-color: hsla(167, 44%, 76%, 0.09);
     border: 1px solid hsla(42, 44%, 76%, 0.5);
     letter-spacing: 0.03em;
     position: relative;
@@ -91,7 +91,7 @@
 }
 
 .desc::before {
-    background-color: white;
+    background-color: grey;
     border: 1px solid hsla(42, 44%, 76%, 0.5);
     font-size: 1.5em;
     content: "Problem Statement";
@@ -117,7 +117,7 @@
 }
 
 .example::before {
-    background-color: white;
+    background-color: grey;
     border: 1px solid hsla(167, 44%, 76%, 0.5);
     font-size: 1.5em;
     content: "Example : " attr(exn);
@@ -155,7 +155,7 @@
 }
 
 .editor::before {
-    background-color: white;
+    background-color: grey;
     border: 1px solid hsla(270, 44%, 76%, 0.5);
     font-size: 1.5em;
     content: "Code";
