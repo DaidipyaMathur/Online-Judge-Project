@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { ClickAwayListener } from "@mui/material"
 import ExtraMenu from "./ExtraMenu/ExtraMenu"
+import ThemeToggle from "../ThemeToggle/ThemeToggle"
 
 const NavBar = () => {
     const [expand, setExpand] = useState(false);
@@ -43,17 +44,6 @@ const NavBar = () => {
                     </Navbar.Toggle>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto" defaultActiveKey="#home">
-                            {/* <Nav.Item>
-                            <Nav.Link
-                                as={Link}
-                                to="/"
-                                onClick={() => setExpand(false)}
-                                className='myNavLink'
-                            >
-                                Home
-                            </Nav.Link>
-                        </Nav.Item> */}
-
                             <Nav.Item>
                                 <Nav.Link
                                     as={Link}
@@ -74,6 +64,13 @@ const NavBar = () => {
                                 >
                                     LeaderBoard
                                 </Nav.Link>
+                            </Nav.Item>
+
+                            {/* Theme Toggle Button */}
+                            <Nav.Item>
+                                <div className="nav-link">
+                                    <ThemeToggle />
+                                </div>
                             </Nav.Item>
 
                             <Nav.Item>
