@@ -14,7 +14,8 @@ import { messageActions } from '../../../store/Message/message-slice'
 
 const Filter = props => {
 
-    const { easy,
+    const {
+        easy,
         medium,
         hard,
         setEasy,
@@ -48,99 +49,105 @@ const Filter = props => {
 
     return (
         <Fragment>
-            <div className={classes.heading}>Filter</div>
+            <div className={classes.filterContainer}>
+                <div className={classes.heading}>Filter</div>
 
-            <div className={classes.clearFilter}>
-                <Button color="error" onClick={clearFilter} variant="outlined" endIcon={
-                    <DeleteIcon fontSize='large' style={{ fontSize: '2em' }} />
-                } style={{ fontFamily: 'PT Serif', fontWeight: '500', textTransform: 'capitalize' }}>
-                    <span style={{ fontSize: '1.1rem' }}>Clear-Filter</span>
-                </Button>
-            </div>
-
-            <div style={{ borderBottom: '1px solid rgba(34, 36, 38, 0.15)' }}>
-                <div className={classes.checkboxes}>
-                    <FormGroup>
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    onChange={easyChecked}
-                                    checked={easy}
-                                    sx={{
-                                        color: 'hsl(120, 60%, 50%)',
-                                        '&.Mui-checked': {
-                                            color: 'hsl(120, 60%, 50%)',
-                                        }
-                                    }} />}
-                            label="Easy"
-                        />
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    onChange={mediumChecked}
-                                    checked={medium}
-                                    sx={{
-                                        color: 'hsl(240, 60%, 50%)',
-                                        '&.Mui-checked': {
-                                            color: 'hsl(240, 60%, 50%)',
-                                        }
-                                    }} />}
-                            label="Medium"
-                        />
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    onChange={hardChecked}
-                                    checked={hard}
-                                    sx={{
-                                        color: 'hsl(0, 60%, 50%)',
-                                        '&.Mui-checked': {
-                                            color: 'hsl(0, 60%, 50%)',
-                                        }
-                                    }} />}
-                            label="Hard"
-                        />
-                    </FormGroup>
+                <div className={classes.clearFilter}>
+                    <Button
+                        color="error"
+                        onClick={clearFilter}
+                        variant="outlined"
+                        endIcon={<DeleteIcon fontSize='large' style={{ fontSize: '2em' }} />}
+                        style={{ fontFamily: 'PT Serif', fontWeight: '500', textTransform: 'capitalize' }}
+                    >
+                        <span style={{ fontSize: '1.1rem' }}>Clear-Filter</span>
+                    </Button>
                 </div>
-            </div>
 
-            {loggedIn &&
-                <div style={{ borderBottom: '1px solid rgba(34, 36, 38, 0.15)' }}>
+                <div style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.3)' }}>
                     <div className={classes.checkboxes}>
                         <FormGroup>
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        onChange={() => setSolved(prev => !prev)}
-                                        checked={solved}
+                                        onChange={easyChecked}
+                                        checked={easy}
                                         sx={{
-                                            color: '#0288d1',
+                                            color: 'hsl(120, 60%, 70%)',
                                             '&.Mui-checked': {
-                                                color: '#0288d1'
+                                                color: 'hsl(120, 60%, 70%)',
                                             }
-                                        }}
-                                    />}
-                                label="Solved"
+                                        }} />}
+                                label="Easy"
                             />
                             <FormControlLabel
                                 control={
                                     <Checkbox
-                                        onChange={() => setUnsolved(prev => !prev)}
-                                        checked={unsolved}
+                                        onChange={mediumChecked}
+                                        checked={medium}
                                         sx={{
-                                            color: '#0288d1',
+                                            color: 'hsl(240, 60%, 70%)',
                                             '&.Mui-checked': {
-                                                color: '#0288d1'
+                                                color: 'hsl(240, 60%, 70%)',
                                             }
-                                        }}
-                                    />}
-                                label="Unsolved"
+                                        }} />}
+                                label="Medium"
+                            />
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        onChange={hardChecked}
+                                        checked={hard}
+                                        sx={{
+                                            color: 'hsl(0, 60%, 70%)',
+                                            '&.Mui-checked': {
+                                                color: 'hsl(0, 60%, 70%)',
+                                            }
+                                        }} />}
+                                label="Hard"
                             />
                         </FormGroup>
                     </div>
                 </div>
-            }
-        </Fragment >
+
+                {loggedIn &&
+                    <div style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.3)' }}>
+                        <div className={classes.checkboxes}>
+                            <FormGroup>
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox
+                                            onChange={() => setSolved(prev => !prev)}
+                                            checked={solved}
+                                            sx={{
+                                                color: '#B3E5FC',
+                                                '&.Mui-checked': {
+                                                    color: '#B3E5FC'
+                                                }
+                                            }}
+                                        />}
+                                    label="Solved"
+                                />
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox
+                                            onChange={() => setUnsolved(prev => !prev)}
+                                            checked={unsolved}
+                                            sx={{
+                                                color: '#B3E5FC',
+                                                '&.Mui-checked': {
+                                                    color: '#B3E5FC'
+                                                }
+                                            }}
+                                        />}
+                                    label="Unsolved"
+                                />
+                            </FormGroup>
+                        </div>
+                    </div>
+                }
+            </div>
+        </Fragment>
     )
 }
 
