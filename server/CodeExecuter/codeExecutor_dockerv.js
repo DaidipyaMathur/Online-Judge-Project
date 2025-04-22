@@ -82,6 +82,9 @@ const languageSpecificDetails = {
 
 const execCodeAgainstTestcases = (filePath, language, testcase) => {
 
+    console.log("🔥 Testcase content:", testcase);
+
+
     // check if language is supported or not
     if (!languageSpecificDetails[language]) throw { msg: languageErrMsg };
 
@@ -91,7 +94,8 @@ const execCodeAgainstTestcases = (filePath, language, testcase) => {
     if (!filePath.includes("\\") && !filePath.includes("/"))
         filePath = path.join(codeDirectory, filePath);
 
-    const { input, output } = require(`./testcases/${testcase}`)
+    const fs = require('fs');
+    const testcases = testcase;
 
     return new Promise(async (resolve, reject) => {
         try {

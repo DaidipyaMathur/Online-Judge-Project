@@ -1,0 +1,170 @@
+Docker Error:  js-oj-container Docker Error : {"msg":"on docker error","error":null,"stderr":"Unable to find image 'node:16.17.0-bullseye-slim' locally\n16.17.0-bullseye-slim: Pulling from library/node\n31b3f1ad4ce1: Pulling fs layer\nc973db49e5a0: Pulling fs layer\n69b0052faebf: Pulling fs layer\nc1e0dc661a4e: Pulling fs layer\n38b58f98de7a: Pulling fs layer\n31b3f1ad4ce1: Waiting\nc973db49e5a0: Waiting\n69b0052faebf: Waiting\nc1e0dc661a4e: Waiting\n38b58f98de7a: Waiting\n31b3f1ad4ce1: Verifying Checksum\n31b3f1ad4ce1: Download complete\n31b3f1ad4ce1: Pull complete\nc973db49e5a0: Download complete\nc973db49e5a0: Pull complete\nc1e0dc661a4e: Verifying Checksum\nc1e0dc661a4e: Download complete\n38b58f98de7a: Verifying Checksum\n38b58f98de7a: Download complete\n69b0052faebf: Verifying Checksum\n69b0052faebf: Download complete\n69b0052faebf: Pull complete\nc1e0dc661a4e: Pull complete\n38b58f98de7a: Pull complete\nDigest: sha256:59812c19504546fc66b0b26722bf0754ee48b74f9abc5ed9c3f251fc45d86099\nStatus: Downloaded newer image for node:16.17.0-bullseye-slim\n"}
+4/18/2025, 12:10:18 PM
+TypeError: Cannot read properties of null (reading 'name')
+    at loggedInController (/home/daidipya-mathur/Online-Judge-Project/server/controllers/user.js:81:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 4/18/2025, 12:44:37 PM
+TypeError: Cannot read properties of null (reading 'name')
+    at loggedInController (/home/daidipya-mathur/Online-Judge-Project/server/controllers/user.js:81:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 4/18/2025, 12:53:56 PM
+TypeError: Cannot read properties of null (reading 'name')
+    at loggedInController (/home/daidipya-mathur/Online-Judge-Project/server/controllers/user.js:81:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 4/18/2025, 12:54:18 PM
+Error without msg in bull.process Error: Cannot find module './testcases/2 3
+-1 7
+100 200
+0 0
+-50 20'
+Require stack:
+- /home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js
+- /home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js
+- /home/daidipya-mathur/Online-Judge-Project/server/controllers/explore.js
+- /home/daidipya-mathur/Online-Judge-Project/server/routes/explore.js
+- /home/daidipya-mathur/Online-Judge-Project/server/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1134:15)
+    at Module._load (node:internal/modules/cjs/loader:975:27)
+    at Module.require (node:internal/modules/cjs/loader:1225:19)
+    at require (node:internal/modules/helpers:177:18)
+    at execCodeAgainstTestcases (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js:94:31)
+    at processAgainstTestcases (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js:32:26)
+    at Queue.<anonymous> (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js:52:48)
+    at handlers.<computed> (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/bull/lib/queue.js:701:42)
+    at Queue.processJob (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/bull/lib/queue.js:1162:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/controllers/explore.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/routes/explore.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/index.js'
+  ]
+} 4/18/2025, 12:54:48 PM
+Error without msg in bull.process Error: Cannot find module './testcases/2 3
+-1 7
+100 200
+0 0
+-50 20'
+Require stack:
+- /home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js
+- /home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js
+- /home/daidipya-mathur/Online-Judge-Project/server/controllers/explore.js
+- /home/daidipya-mathur/Online-Judge-Project/server/routes/explore.js
+- /home/daidipya-mathur/Online-Judge-Project/server/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1134:15)
+    at Module._load (node:internal/modules/cjs/loader:975:27)
+    at Module.require (node:internal/modules/cjs/loader:1225:19)
+    at require (node:internal/modules/helpers:177:18)
+    at execCodeAgainstTestcases (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js:94:31)
+    at processAgainstTestcases (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js:32:26)
+    at Queue.<anonymous> (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js:52:48)
+    at handlers.<computed> (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/bull/lib/queue.js:701:42)
+    at Queue.processJob (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/bull/lib/queue.js:1162:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/controllers/explore.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/routes/explore.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/index.js'
+  ]
+} 4/18/2025, 12:56:09 PM
+Error without msg in bull.process Error: Cannot find module './testcases/2 3
+-1 7
+100 200
+0 0
+-50 20'
+Require stack:
+- /home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js
+- /home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js
+- /home/daidipya-mathur/Online-Judge-Project/server/controllers/explore.js
+- /home/daidipya-mathur/Online-Judge-Project/server/routes/explore.js
+- /home/daidipya-mathur/Online-Judge-Project/server/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1134:15)
+    at Module._load (node:internal/modules/cjs/loader:975:27)
+    at Module.require (node:internal/modules/cjs/loader:1225:19)
+    at require (node:internal/modules/helpers:177:18)
+    at execCodeAgainstTestcases (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js:94:31)
+    at processAgainstTestcases (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js:32:26)
+    at Queue.<anonymous> (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js:52:48)
+    at handlers.<computed> (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/bull/lib/queue.js:701:42)
+    at Queue.processJob (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/bull/lib/queue.js:1162:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/controllers/explore.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/routes/explore.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/index.js'
+  ]
+} 4/18/2025, 1:25:34 PM
+Error without msg in bull.process Error: Cannot find module './testcases/2 3
+-1 7
+100 200
+0 0
+-50 20'
+Require stack:
+- /home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js
+- /home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js
+- /home/daidipya-mathur/Online-Judge-Project/server/controllers/explore.js
+- /home/daidipya-mathur/Online-Judge-Project/server/routes/explore.js
+- /home/daidipya-mathur/Online-Judge-Project/server/index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1134:15)
+    at Module._load (node:internal/modules/cjs/loader:975:27)
+    at Module.require (node:internal/modules/cjs/loader:1225:19)
+    at require (node:internal/modules/helpers:177:18)
+    at execCodeAgainstTestcases (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js:94:31)
+    at processAgainstTestcases (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js:32:26)
+    at Queue.<anonymous> (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js:52:48)
+    at handlers.<computed> (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/bull/lib/queue.js:701:42)
+    at Queue.processJob (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/bull/lib/queue.js:1162:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/controllers/explore.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/routes/explore.js',
+    '/home/daidipya-mathur/Online-Judge-Project/server/index.js'
+  ]
+} 4/18/2025, 1:29:33 PM
+Error while inserting log into the database: MongooseError: Operation `logs.insertOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+TypeError: Cannot read properties of null (reading 'name')
+    at loggedInController (/home/daidipya-mathur/Online-Judge-Project/server/controllers/user.js:81:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 4/18/2025, 1:31:11 PM
+Error without msg in bull.process ReferenceError: testcasePath is not defined
+    at execCodeAgainstTestcases (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js:95:39)
+    at processAgainstTestcases (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js:32:26)
+    at Queue.<anonymous> (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js:52:48)
+    at handlers.<computed> (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/bull/lib/queue.js:701:42)
+    at Queue.processJob (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/bull/lib/queue.js:1162:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 4/18/2025, 1:31:26 PM
+Error without msg in bull.process ReferenceError: testcasePath is not defined
+    at execCodeAgainstTestcases (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js:95:39)
+    at processAgainstTestcases (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js:32:26)
+    at Queue.<anonymous> (/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/queryQueue.js:52:48)
+    at handlers.<computed> (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/bull/lib/queue.js:701:42)
+    at Queue.processJob (/home/daidipya-mathur/Online-Judge-Project/server/node_modules/bull/lib/queue.js:1162:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 4/18/2025, 1:39:34 PM
+TypeError: Cannot read properties of null (reading 'name')
+    at loggedInController (/home/daidipya-mathur/Online-Judge-Project/server/controllers/user.js:81:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 4/18/2025, 1:40:44 PM
+Error without msg in bull.process ReferenceError: input is not defined
+    at /home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js:102:41
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 4/18/2025, 1:41:08 PM
+TypeError: Cannot read properties of null (reading 'name')
+    at loggedInController (/home/daidipya-mathur/Online-Judge-Project/server/controllers/user.js:81:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 4/18/2025, 1:45:10 PM
+Error without msg in bull.process ReferenceError: input is not defined
+    at /home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeExecutor_dockerv.js:105:41
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 4/18/2025, 1:45:15 PM
+Docker Error:  py-oj-container Docker Error : {"msg":"on docker error","error":{"code":125,"killed":false,"signal":null,"cmd":"docker run -i -d --rm --mount type=bind,src=\"/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeFiles\",dst=/codeFiles --name py-oj-container --label oj=oj python:3.10-slim"},"stderr":"docker: Cannot connect to the Docker daemon at unix:///home/daidipya-mathur/.docker/desktop/docker.sock. Is the docker daemon running?\n\nRun 'docker run --help' for more information\n"}
+4/22/2025, 4:10:20 PM
+Docker Error:  java-oj-container Docker Error : {"msg":"on docker error","error":{"code":125,"killed":false,"signal":null,"cmd":"docker run -i -d --rm --mount type=bind,src=\"/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeFiles\",dst=/codeFiles --name java-oj-container --label oj=oj openjdk:20-slim"},"stderr":"docker: Cannot connect to the Docker daemon at unix:///home/daidipya-mathur/.docker/desktop/docker.sock. Is the docker daemon running?\n\nRun 'docker run --help' for more information\n"}
+4/22/2025, 4:43:13 PM
+Docker Error:  java-oj-container Docker Error : {"msg":"on docker error","error":{"code":125,"killed":false,"signal":null,"cmd":"docker run -i -d --rm --mount type=bind,src=\"/home/daidipya-mathur/Online-Judge-Project/server/CodeExecuter/codeFiles\",dst=/codeFiles --name java-oj-container --label oj=oj openjdk:20-slim"},"stderr":"docker: Cannot connect to the Docker daemon at unix:///home/daidipya-mathur/.docker/desktop/docker.sock. Is the docker daemon running?\n\nRun 'docker run --help' for more information\n"}
+4/22/2025, 4:51:57 PM
