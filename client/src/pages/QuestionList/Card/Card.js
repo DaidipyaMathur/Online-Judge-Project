@@ -1,55 +1,83 @@
-import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import classes from './Card.module.css';
-import Button from '../../../compenents/Button/Button';
+/* .left,
+.right {
+    border: 1px orange solid;
+} */
 
-import CodeIcon from '@mui/icons-material/Code';
+.Card {
+    font-family: 'gotham';
+    color: var(--text-color, rgb(122, 119, 119));
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    min-height: 8rem;
+    /* background-color: hsl(160, 80%, 95%); */
+    /* border-radius: 1rem; */
+    margin: 1.5rem 5rem;
+    padding: 1.5rem 0 0 0;
+    border-bottom: 1px solid var(--border-color, rgba(34, 36, 38, .15));
+}
 
-const Card = props => {
-    const { question, solved } = props;
-    
-    // Get the current theme mode from Redux store
-    const isDarkMode = useSelector(state => state.theme?.darkMode);
-    
-    // Apply theme variables to document root on theme change
-    useEffect(() => {
-        const root = document.documentElement;
-        if (isDarkMode) {
-            // Dark theme variables
-            root.style.setProperty('--card-text-color', '#e4e4e4');
-            root.style.setProperty('--card-border-color', 'rgba(200, 200, 200, 0.15)');
-            root.style.setProperty('--card-mid-text-color', '#a0a0a0');
-            root.style.setProperty('--card-question-name-color', '#ffffff');
-            root.style.setProperty('--card-success-color', '#a0a0a0');
-        } else {
-            // Light theme variables
-            root.style.setProperty('--card-text-color', 'black');
-            root.style.setProperty('--card-border-color', 'rgba(34, 36, 38, .15)');
-            root.style.setProperty('--card-mid-text-color', 'inherit');
-            root.style.setProperty('--card-question-name-color', 'inherit');
-            root.style.setProperty('--card-success-color', 'inherit');
-        }
-    }, [isDarkMode]);
+@media (max-width:1000px) {
+    .Card {
+        margin: 1.5rem 0.01rem;
+    }
 
-    return (
-        <div className={classes.Card}>
-            <div className={classes.left}>
-                <div className={classes.questionName}>
-                    {question.name}
-                </div>
-            </div>
-            <div className={classes.mid}>
-                <div className={classes.level} diff-color={question.difficulty}>{question.difficulty}</div>
-                <div className={classes.succ}>{question.noOfSuccess === 0 ? 0 : ((question.noOfSuccess / question.noOfSubm * 100).toFixed(2))}% Success</div>
-            </div>
-            <div className={classes.right}>
-                <Button to={`/questions/${question._id}`} color={solved ? 'grey' : 'blue'}>
-                    {solved ? "Solved" : "Solve"}
-                    <CodeIcon fontSize='large' style={{ marginLeft: '0.5em' }} />
-                </Button>
-            </div>
-        </div>
-    );
-};
+    .questionName {
+        font-size: 1.4em !important;
+    }
 
-export default Card;
+    .mid {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+}
+
+.level::first-letter {
+    text-transform: capitalize;
+    font-size: 1.3em;
+}
+
+.level[diff-color="easy"] {
+    color: var(--easy-difficulty);
+}
+
+.level[diff-color="medium"] {
+    color: var(--medium-difficulty);
+}
+
+.level[diff-color="hard"] {
+    color: var(--hard-difficulty);
+}
+
+.left {
+    width: 50%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.mid {
+    width: 20%;
+    /* color: hsla(0, 0%, 96%, .6); */
+    font-family: 'Raleway', 'gotham';
+    font-weight: 800;
+    font-size: 13px !important;
+    letter-spacing: 2.7px;
+    color: var(--secondary-text-color, inherit);
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+}
+
+.questionName {
+    font-size: 1.7em;
+    margin-left: 1rem;
+    text-align: start;
+    color: var(--text-color, inherit);
+}
+
+.succ {
+    color: var(--secondary-text-color, inherit);
+}
